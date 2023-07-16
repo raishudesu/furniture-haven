@@ -1,0 +1,86 @@
+[
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1506898667547-42e22a46e125?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvZmF8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Comfy Single Person Chair",
+    "price": "$299",
+    "category": "sofas",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNvZmF8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "White Chair",
+    "price": "$99",
+    "category": "sofas",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1617364852223-75f57e78dc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNoYWlyfGVufDB8MXwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Relaxing Sofa",
+    "price": "$399",
+    "category": "sofas",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hhaXJ8ZW58MHwxfDB8fHwy&auto=format&fit=crop&w=500&q=60",
+    "name": "White Stool",
+    "price": "$199",
+    "category": "chairs",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoYWlyfGVufDB8MXwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Gray Comfy Chair",
+    "price": "$199",
+    "category": "chairs",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1619596662481-085e45d69762?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNoYWlyfGVufDB8MXwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Foam Room Chair",
+    "price": "$239",
+    "category": "chairs",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGFibGV8ZW58MHwxfDB8fHwy&auto=format&fit=crop&w=500&q=60",
+    "name": "Aesthetic Coffee Table (set)",
+    "price": "$139",
+    "category": "tables",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRhYmxlfGVufDB8MXwwfHx8Mg%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "name": "Bedroom Table",
+    "price": "$99",
+    "category": "tables",
+    "trending": true
+  },
+  {
+    "imageUrl": "https://img.freepik.com/free-photo/coffee-pink-cup-by-vase-pink-roses_53876-143022.jpg?size=626&ext=jpg&uid=R109801901&ga=GA1.2.56829464.1689350537&semt=ais",
+    "name": "Coffee Table",
+    "price": "$239",
+    "category": "tables",
+    "trending": false
+  },
+  {
+    "imageUrl": "https://img.freepik.com/free-photo/white-comfortable-pillow-bed-decoration-interior_74190-10609.jpg?w=740&t=st=1689502502~exp=1689503102~hmac=57d6d3d5d1f180336cc33697e8f9b220993af870075f8e40372c4820b653288a",
+    "name": "Comfy Bed",
+    "price": "$499",
+    "category": "beds",
+    "trending": false
+  },
+  {
+    "imageUrl": "https://img.freepik.com/free-photo/white-pillow-bed-with-light-lamp_74190-11947.jpg?size=626&ext=jpg&uid=R109801901&ga=GA1.2.56829464.1689350537&semt=sph",
+    "name": "Comfy Bed w/ Accessories",
+    "price": "$539",
+    "category": "beds",
+    "trending": false
+  },
+  {
+    "imageUrl": "https://img.freepik.com/free-photo/bed-arrangements-still-life_23-2150532990.jpg?size=626&ext=jpg&uid=R109801901&ga=GA1.2.56829464.1689350537&semt=sph",
+    "name": "Wooden Bed",
+    "price": "$339",
+    "category": "beds",
+    "trending": false
+  }
+]
