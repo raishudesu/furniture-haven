@@ -45,20 +45,20 @@ const Header = () => {
         <ul className="hidden md:flex ">
           <RouterLink
             to="/"
-            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+            className="p-3 hover:text-gray-100 hover:bg-[#242424] transition ease-in-out rounded-xl font-semibold cursor-pointer"
           >
             Home
           </RouterLink>
 
           <RouterLink
             to="/shoppage"
-            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+            className="p-3 hover:text-gray-100 hover:bg-[#242424] transition ease-in-out rounded-xl font-semibold cursor-pointer"
           >
             Products
           </RouterLink>
           <RouterLink
-            to="contact"
-            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+            to="/"
+            className="p-3 hover:text-gray-100 hover:bg-[#242424] transition ease-in-out rounded-xl font-semibold cursor-pointer"
           >
             Contact Us
           </RouterLink>
@@ -105,7 +105,7 @@ const Header = () => {
             Products
           </RouterLink>
           <RouterLink
-            to="contact"
+            to="/"
             className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
           >
             Contact Us
