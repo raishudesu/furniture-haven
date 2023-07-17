@@ -5,6 +5,7 @@ import RelatedProducts from "./RelatedProducts";
 
 const ProductClick = () => {
   const [itemCount, setItemCount] = useState(1);
+
   const location = useLocation();
   const { item } = location.state || {};
   if (!item) {
@@ -25,12 +26,32 @@ const ProductClick = () => {
     return amount;
   };
 
+  const addToCart = () => {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const newItem = {
+      imageUrl,
+      category,
+      name,
+      price: priceToInt(),
+      quantity: itemCount,
+      subTotal: priceToInt() * itemCount,
+    };
+    cartItems.push(newItem);
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    setItemCount(1);
+    window.dispatchEvent(new Event("cartUpdated"));
+  };
+
   return (
     <div className="w-full max-h-fit overflow-hidden">
       <div className="">
         <div className="flex flex-col lg:flex-row justify-center gap-6 items-center">
-          <img src={imageUrl} alt="/" className="w-full lg:w-[20%]" />
-          <div className="p-2 flex flex-col gap-2 w-full lg:w-[25%]">
+          <img
+            src={imageUrl}
+            alt="/"
+            className="w-full lg:w-[30%] xl:w-[25%]"
+          />
+          <div className="p-2 flex flex-col gap-2 w-full lg:w-[50%] xl:w-[30%]">
             <div className="flex flex-col justify-center items-start gap-2 ">
               <h1 className="uppercase text-2xl font-semibold">{category}</h1>
               <h1 className="text-lg lg:text-6xl font-bold">{name}</h1>
@@ -60,7 +81,10 @@ const ProductClick = () => {
               </h1>
             </div>
             <div className="flex flex-col text-white font-semibold gap-2 ">
-              <button className="bg-[#242424] py-4 rounded-lg">
+              <button
+                onClick={addToCart}
+                className="bg-[#242424] py-4 rounded-lg"
+              >
                 Add To Cart
               </button>
               <button className="bg-white text-black border-2 border-[#242424] py-4 rounded-lg">

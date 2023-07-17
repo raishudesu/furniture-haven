@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineMenu,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+import Cart from "./Cart";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const [cart, setCart] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,6 +27,9 @@ const Header = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const handleCart = () => {
+    setCart(!cart);
+  };
   return (
     <div className="overflow-hidden bg-white transition ease-in-out shadow-md sticky top-0 flex justify-between md:justify-between lg:justify-evenly items-center h-20 w-full mx-auto px-4 text-black z-30">
       <ScrollLink
@@ -32,27 +41,36 @@ const Header = () => {
       >
         Furniture Haven
       </ScrollLink>
-      <ul className="hidden md:flex justify-end md:w-[70%] lg:w-[60%]">
-        <RouterLink
-          to="/"
-          className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
-        >
-          Home
-        </RouterLink>
+      <div className="flex justify-end w-[50%] md:w-[70%] lg:w-[60%]">
+        <ul className="hidden md:flex ">
+          <RouterLink
+            to="/"
+            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+          >
+            Home
+          </RouterLink>
 
-        <RouterLink
-          to="/shoppage"
-          className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+          <RouterLink
+            to="/shoppage"
+            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+          >
+            Products
+          </RouterLink>
+          <RouterLink
+            to="contact"
+            className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
+          >
+            Contact Us
+          </RouterLink>
+        </ul>
+        <button
+          onClick={handleCart}
+          className="transition ease-in-out cursor-pointer flex items-center px-4 "
         >
-          Products
-        </RouterLink>
-        <RouterLink
-          to="contact"
-          className="p-3 hover:text-red-500 transition ease-in-out rounded-xl font-semibold cursor-pointer"
-        >
-          Contact Us
-        </RouterLink>
-      </ul>
+          <AiOutlineShoppingCart size={30} />
+        </button>
+      </div>
+
       <div onClick={handleNav} className="block md:hidden">
         {nav ? (
           <AiOutlineClose size={20} className="cursor-pointer" />
@@ -93,6 +111,15 @@ const Header = () => {
             Contact Us
           </RouterLink>
         </ul>
+      </div>
+      <div
+        className={
+          cart
+            ? "border-l-2 overscroll-contain flex flex-col items-center py-6 fixed right-0 top-0 h-full w-[100%] sm:w-[50%] lg:w-[35%] border-r bg-white ease-in-out duration-500 "
+            : "fixed right-[-150%]"
+        }
+      >
+        <Cart handleCart={handleCart} />
       </div>
     </div>
   );

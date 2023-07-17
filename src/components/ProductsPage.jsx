@@ -1,6 +1,8 @@
 import React from "react";
 import Products from "../assets/products.json";
 import { useNavigate } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const ProductsPage = () => {
   const filterByTrending = () => {
@@ -12,6 +14,14 @@ const ProductsPage = () => {
   };
 
   const renderProducts = filterByTrending();
+  const imageLoader = (imageUrl) => {
+    return imageUrl ? (
+      <img src={imageUrl} alt="" />
+    ) : (
+      <Skeleton className="h-full" />
+    );
+  };
+
   return (
     <div
       id="productspage"
@@ -34,7 +44,7 @@ const ProductsPage = () => {
                     className="cursor-pointer shadow-md shadow-gray-500 rounded-sm overflow-hidden max-w-[250px]"
                   >
                     <div className="overflow-hidden max-h-[310px]">
-                      <img src={imageUrl} alt="" />
+                      {imageLoader(imageUrl)}
                     </div>
 
                     <div className="flex flex-col gap-3 text-start p-2 mt-2">
