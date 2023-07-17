@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import RelatedProducts from "./RelatedProducts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductClick = () => {
   const [itemCount, setItemCount] = useState(1);
@@ -25,7 +27,17 @@ const ProductClick = () => {
     const amount = parseInt(price.slice(1), 10);
     return amount;
   };
-
+  const notifyAddedToCart = () =>
+    toast.success("Added to Cart!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   const addToCart = () => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     const newItem = {
@@ -39,11 +51,24 @@ const ProductClick = () => {
     cartItems.push(newItem);
     localStorage.setItem("cart", JSON.stringify(cartItems));
     setItemCount(1);
+    notifyAddedToCart();
     window.dispatchEvent(new Event("cartUpdated"));
   };
 
   return (
     <div className="w-full max-h-fit overflow-hidden">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="">
         <div className="flex flex-col lg:flex-row justify-center gap-6 items-center">
           <img
